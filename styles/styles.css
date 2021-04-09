@@ -6,7 +6,9 @@ Main Elements
 *, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
@@ -18,14 +20,70 @@ html::-webkit-scrollbar {
 }
 
 html, body {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     background-color: black;
     font-size: 100%;
-    box-sizing: border-box;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
     -o-user-select: none;
+}
+/*
+================================
+Tags
+================================
+*/
+
+
+/*
+    BODY
+*/
+head {
+    display: none;
+}
+
+body {
+    position: relative;
+    font-family: "Source Sans Pro",Helvetica,Calibri,Arial,sans-serif;
+    font-display: swap;
+    font-size: 17px;
+    line-height: 1.65;
+    color: #5b5b5b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 1px;
+    font-weight: 300;
+}
+
+/*
+    HEADER
+*/
+header {
+    display: block;
+}
+
+.header {
+    background-color: pink;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 700;
+    height: 50px;
+    border-bottom: 2px solid #ED4A62;
+    transition: all 0.2s ease;
+}
+
+/*
+    DIVS
+*/
+
+div {
+    display: block;
 }
 
 /*
@@ -34,8 +92,15 @@ Content
 ================================
 */
 
+.cf {
+    display: table;
+    zoom: 1;
+    content: "";
+}
+
 #content {
     width: 100%;
+    margin-top: 50px;
 }
 /*
 ================================
